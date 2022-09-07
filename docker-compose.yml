@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=adam
+      - POSTGRES_PASSWORD=adam123
+    ports:
+      - "5432:5432"
+  web:
+    build: . # this is already in file "Dockerfile", "." means that this is in the same location
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code/
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
