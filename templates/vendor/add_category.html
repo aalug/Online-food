@@ -42,9 +42,11 @@
 
                                 {% for field in form %}
                                     {% if field.errors %}
+                                        <ul>
                                         {% for error in field.errors %}
                                             <li style="color: red;">{{ error }}</li>
                                         {% endfor %}
+                                        </ul>
                                     {% endif %}
                                 {% endfor %}
 
