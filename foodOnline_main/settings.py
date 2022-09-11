@@ -161,3 +161,6 @@ EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 
 GOOGLE_API_KEY = config('API_KEY')
+
+# url for LoginRequiredMixin
+LOGIN_URL = 'login'

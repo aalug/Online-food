@@ -14,4 +14,11 @@ urlpatterns = [
     path('menu-builder/category/edit/<int:pk>/', views.EditCategoryView.as_view(), name='edit_category'),
     path('menu-builder/category/delete/<int:pk>/', views.delete_category, name='delete_category'),
 
+    # Food item CRUD
+    path('menu-builder/food/add/', views.AddFoodView.as_view(), name='add_food'),
+    path('menu-builder/food/edit/<int:pk>/', views.EditFoodItemView.as_view(), name='edit_food'),
+    path('menu-builder/food/delete/<int:pk>/', views.delete_food_item, name='delete_food'),
+
+
+
 ]

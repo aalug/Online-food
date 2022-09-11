@@ -19,3 +19,8 @@
     font-size: 12px;
     cursor: pointer;
 }
+
+.selected-opt {
+    text-decoration: underline;
+    background-color: rgba(237, 153, 153, 0.27)
+}
