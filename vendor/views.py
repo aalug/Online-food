@@ -105,7 +105,7 @@ class AddCategoryFormView(LoginRequiredMixin, UserPassesTestMixin, FormView):
         return super().form_valid(form)
 
 
-class EditCategoryView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin,UpdateView):
+class EditCategoryView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, UpdateView):
 
     def test_func(self):
         return check_role_vendor(self.request.user)
