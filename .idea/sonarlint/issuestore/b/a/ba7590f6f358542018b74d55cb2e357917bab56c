@@ -1,0 +1,8 @@
+
+spython:S1192%"[Define a constant instead of duplicating this literal 'You are already logged in!' 3 times.(ß†Þü
+opython:S1542#"RRename function "registerUser" to match the regular expression ^[a-z_][a-z0-9_]*$.(¸ì³Çÿÿÿÿÿ
+lpython:S1542L"TRename function "registerVendor" to match the regular expression ^[a-z_][a-z0-9_]*$.(îãü 
+tpython:S117©"\Rename this local variable "redirectUrl" to match the regular expression ^[_a-z][a-z0-9_]*$.(”ÄÑ„
+hpython:S1542§"ORename function "myAccount" to match the regular expression ^[a-z_][a-z0-9_]*$.(Œê Œ
+kpython:S1542¯"SRename function "custDashboard" to match the regular expression ^[a-z_][a-z0-9_]*$.(Õ¨’i
+npython:S1542µ"URename function "vendorDashboard" to match the regular expression ^[a-z_][a-z0-9_]*$.(•¦µÝ
