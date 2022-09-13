@@ -12,8 +12,6 @@ W
 'templates/accounts/vendorDashboard.html,6\9\69f2228b54140cf78adb5e82455ee3b0ca732d5b
 Q
 !templates/includes/v_sidebar.html,5\5\5555951f2090a11adcc34a616f035d6a5c202136
-M
-templates/includes/cover.html,e\5\e5f963ba83fc8018ec3f8badf5a91268c28f00fa
 @
 vendor/models.py,6\6\66dc5001097accdc1066fdd247ad786daa24a851
 D
@@ -32,8 +30,6 @@ C
 templates/home.html,8\6\86f3a00c4de0ad1280042b4c75ce3672e5141a0f
 H
 foodOnline_main/views.py,b\e\bec0d0c084ef8c3b45195897af899d3e61983f3e
-G
-foodOnline_main/urls.py,e\8\e8d8a34b4ed1fcf6f8a64ef075196aef83519bcb
 >
 menu/models.py,2\5\25abc5760e9315627fd8fbee6afe7f89452e779b
 _
@@ -44,5 +40,3 @@ A
 accounts/views.py,b\a\ba7590f6f358542018b74d55cb2e357917bab56c
 ?
 vendor/views.py,d\f\dfdb18385ec0e0fa0d49ea263c1441fc8c381848
-E
-marketplace/models.py,3\d\3d2b3a46c1ed37172db864528c7155bbd0b11bd9

@@ -15,14 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+
 from . import views
+from marketplace import views as marketplace_views
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.HomeView.as_view(), name='home'),
-    path('', include('accounts.urls')),
-    path('marketplace/', include('marketplace.urls'))
+                  path('admin/', admin.site.urls),
+                  path('', views.HomeView.as_view(), name='home'),
+                  path('', include('accounts.urls')),
+                  path('marketplace/', include('marketplace.urls')),
+                  path('cart/', marketplace_views.CartView.as_view(), name='cart'),
 
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,14 +1,14 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Prefetch
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, get_object_or_404
 from django.views import View
 from django.views.generic import ListView
 
-from .context_processors import get_cart_counter
+from .context_processors import get_cart_counter, get_cart_amounts
 from .models import Cart
 from menu.models import FoodItem, Category
 from vendor.models import Vendor
-from vendor.views import get_vendor
 
 
 class MarketplaceView(ListView):
@@ -72,13 +72,13 @@ def add_to_cart(request, food_id):
                     return JsonResponse({'status': 'Success', 'message': 'Increased the cart quantity',
                                          'cart_counter': get_cart_counter(request),
                                          'qty': chkCart.quantity,
-                                         'cart_amount': get_cart_counter(request)})
+                                         'cart_amount': get_cart_amounts(request)})
                 except:
                     chkCart = Cart.objects.create(user=request.user, food_item=food_item, quantity=1)
                     return JsonResponse({'status': 'Success', 'message': 'Added the food to the cart',
                                          'cart_counter': get_cart_counter(request),
                                          'qty': chkCart.quantity,
-                                         'cart_amount': get_cart_counter(request)})
+                                         'cart_amount': get_cart_amounts(request)})
             except:
                 return JsonResponse({'status': 'Failed', 'message': f'This food does not exist! {food_id}'})
         else:
@@ -107,7 +107,7 @@ def decrease_cart(request, food_id):
                     return JsonResponse({'status': 'Success',
                                          'cart_counter': get_cart_counter(request),
                                          'qty': chkCart.quantity,
-                                         'cart_amount': get_cart_counter(request)})
+                                         'cart_amount': get_cart_amounts(request)})
                 except:
                     return JsonResponse({'status': 'Failed', 'message': 'You do not have this item in your cart'})
 
@@ -118,3 +118,32 @@ def decrease_cart(request, food_id):
 
     else:
         return JsonResponse({'status': 'login_required', 'message': 'Please login to continue'})
+
+
+class CartView(LoginRequiredMixin, ListView):
+    """View for displaying cart of a logged-in user"""
+    template_name = 'marketplace/cart.html'
+    context_object_name = 'cart_items'
+
+    def get_queryset(self):
+        return Cart.objects.filter(user=self.request.user).order_by('created_at')
+
+
+def delete_cart(request, cart_id):
+    if request.user.is_authenticated:
+        if is_ajax(request):
+            try:
+                cart_item = Cart.objects.get(user=request.user, id=cart_id)
+                if cart_item:
+                    cart_item.delete()
+                    return JsonResponse({'status': 'Success',
+                                         'message': 'Cart item deleted!',
+                                         'cart_counter': get_cart_counter(request)})
+            except:
+                return JsonResponse({'status': 'Failed', 'message': 'This cart item does not exist!'})
+        else:
+            return JsonResponse({'status': 'Failed', 'message': 'Invalid request!'})
+
+
+
+
