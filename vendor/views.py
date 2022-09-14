@@ -99,8 +99,10 @@ class AddCategoryFormView(LoginRequiredMixin, UserPassesTestMixin, FormView):
         category_name = form.cleaned_data['category_name']
         category = form.save(commit=False)
         category.vendor = get_vendor(self.request)
-        category.slug = slugify(category_name)
-        form.save()
+
+        category.save() # category id will be generated
+        category.slug = f'{slugify(category_name)}-{str(category.id)}'
+        category.save()
         messages.success(self.request, 'Category added successfully!')
         return super().form_valid(form)
 

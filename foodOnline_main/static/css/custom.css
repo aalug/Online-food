@@ -24,3 +24,7 @@
     text-decoration: underline;
     background-color: rgba(237, 153, 153, 0.27)
 }
+
+.main-search.fancy .field-holder input[type="text"] {
+    color: black !important;
+}
