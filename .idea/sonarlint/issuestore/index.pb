@@ -1,11 +1,6 @@
 
 @
 requirements.txt,1\9\19359a61ae2446b51b549167b014da2fcf265768
-:
-
-Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
-B
-docker-compose.yml,3\5\35b8c13cf2eb2a194eada000eb310d65aed53b2a
 [
 +templates/vendor/fooditems_by_category.html,f\3\f3db89536ba578ad99992dbe5f32154b1036cd36
 W
@@ -56,3 +51,9 @@ G
 foodOnline_main/urls.py,e\8\e8d8a34b4ed1fcf6f8a64ef075196aef83519bcb
 C
 templates/base.html,d\a\da7c237b85a69c00a9ab8c189bf63e22070fcac3
+?
+vendor/views.py,d\f\dfdb18385ec0e0fa0d49ea263c1441fc8c381848
+A
+accounts/tests.py,d\d\dd34e9e1474cddb9e5d2f2e680bd1cb27ebbab6e
+D
+marketplace/views.py,b\8\b8d6f1b1de0397478f72d7789dfe4110be628020

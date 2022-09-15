@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectTreeColorHighlighter">
+    <files>
+      <node color="1" path="$PROJECT_DIR$/accounts" />
+      <node color="2" path="$PROJECT_DIR$/marketplace" />
+      <node color="3" path="$PROJECT_DIR$/menu" />
+      <node color="4" path="$PROJECT_DIR$/vendor" />
+    </files>
+    <colors>
+      <color id="1" value="#4f060d82" name="Color 1" enabled="true" />
+      <color id="2" value="#0d16445f" name="Color 2" enabled="true" />
+      <color id="3" value="#013f144e" name="Color 3" enabled="true" />
+      <color id="4" value="#2c062785" name="Color 4" enabled="true" />
+      <color id="5" value="#443906ec" name="Color 5" enabled="true" />
+      <color id="6" value="#0f0728fe" name="Color 6" enabled="true" />
+      <color id="7" value="#2189ed" name="Color 7" enabled="true" />
+      <color id="8" value="#1e1e1e" name="Color 8" enabled="true" />
+    </colors>
+    <option name="marksForCollapsedHighlights" value="Dots" />
+  </component>
+</project>

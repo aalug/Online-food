@@ -1,0 +1,13 @@
+
+npython:S1192U"QDefine a constant instead of duplicating this literal 'Invalid request!' 3 times.(–£Êƒøÿÿÿÿ
+tpython:S117D"XRename this local variable "chkCart" to match the regular expression ^[_a-z][a-z0-9_]*$.(¥¾¶Ôøÿÿÿÿ
+Tpython:S5754R"<Specify an exception class to catch or reraise the exception(ˆÊÉ·
+Tpython:S5754L"<Specify an exception class to catch or reraise the exception(ˆÊÉ·
+tpython:S117c"XRename this local variable "chkCart" to match the regular expression ^[_a-z][a-z0-9_]*$.(¥¾¶Ôøÿÿÿÿ
+Tpython:S5754r"<Specify an exception class to catch or reraise the exception(ˆÊÉ·
+Tpython:S5754o"<Specify an exception class to catch or reraise the exception(ˆÊÉ·
+Upython:S5754Ž"<Specify an exception class to catch or reraise the exception(ˆÊÉ·
+Jpython:S1481˜",Remove the unused local variable "latitude".(£«íøÿÿÿÿ
+Cpython:S1481š"*Remove the unused local variable "radius".(µÀ¼Ì
+Kpython:S1481™"-Remove the unused local variable "longitude".(ê¸ Ôþÿÿÿÿ
+Dpython:S1481—"+Remove the unused local variable "address".(—ø‰—
