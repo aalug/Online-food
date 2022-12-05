@@ -14,7 +14,7 @@ the HTML, CSS, and JS templates.
 To run Django commands with docker:
 1. After Setup run `docker ps` and get the ID of "travelsite-web" container.
 4. Run `docker exec -it <container ID> bash`
-5. Now in bash django commands can be used (e.g. python manage.py makemigrations)
+5. Now in bash django commands can be used (e.g. `python manage.py makemigrations`)
 
 ### Additional information
 Additional information about docker can bo found on
